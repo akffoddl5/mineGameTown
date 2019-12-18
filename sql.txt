@@ -1,0 +1,32 @@
+create table login(
+id varchar(20) constraint login_pk primary key,
+pw varchar(20) constraint pw_nn not null
+);
+
+
+
+
+create table battleLog(
+btId number(7) CONSTRAINT battlelog_pk primary key,
+btGame varchar(20) constraint btgame_nn not null,
+btUserNum number(7) constraint btusernum_nn not null,
+btUserName1 varchar(20),
+btUserName2 varchar(20),
+btUserName3 varchar(20),
+btUserName4 varchar(20),
+btUserScore1 number(7),
+btUserScore2 number(7),
+btUserScore3 number(7),
+btUserScore4 number(7)
+);
+
+
+create sequence battlelog_seq;
+
+select *from tab;
+
+
+commit;
+
+
+--전적이 하나도 없으면 랭킹과 전적이 비어있음.
